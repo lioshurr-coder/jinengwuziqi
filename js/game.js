@@ -6,7 +6,7 @@ class Game {
         this.players = [];
         this.currentPlayer = 0;
         this.turnCount = 0;
-        this.timer = 10;
+        this.timer = 20;
         this.timerInterval = null;
         this.state = 'setup'; // setup, playing, ended
         this.winner = null;
@@ -40,7 +40,7 @@ class Game {
         this.board.reset();
         this.currentPlayer = 0;
         this.turnCount = 0;
-        this.timer = 10;
+        this.timer = 20;
         this.state = 'playing';
         this.winner = null;
         
@@ -133,7 +133,7 @@ class Game {
         // Switch player
         this.currentPlayer = this.currentPlayer === 0 ? 1 : 0;
         this.turnCount++;
-        this.timer = 10;
+        this.timer = 20;
         
         // Give skill card every 4 turns
         if (this.turnCount % 4 === 0) {
@@ -181,7 +181,7 @@ class Game {
         this.board.reset();
         this.currentPlayer = 0;
         this.turnCount = 0;
-        this.timer = 10;
+        this.timer = 20;
         this.state = 'playing';
         
         // Reset shark
@@ -206,7 +206,7 @@ class Game {
         this.players = [];
         this.currentPlayer = 0;
         this.turnCount = 0;
-        this.timer = 10;
+        this.timer = 20;
         this.winner = null;
         
         // Stop timers
