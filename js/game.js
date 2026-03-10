@@ -135,8 +135,8 @@ class Game {
         this.turnCount++;
         this.timer = 10;
         
-        // Give skill card every 2 turns
-        if (this.turnCount % 2 === 0) {
+        // Give skill card every 4 turns
+        if (this.turnCount % 4 === 0) {
             this.players.forEach(p => {
                 if (p.canAddSkill()) {
                     p.addRandomSkill();
