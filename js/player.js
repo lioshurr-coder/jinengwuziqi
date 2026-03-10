@@ -34,13 +34,13 @@ const SKILLS = {
     },
     ZHI_KU_BAO_GAO: {
         id: 'zhi_ku_bao_gao',
-        name: '智库报告',
+        name: '无字天书',
         description: '令对手殚精竭虑，所有棋子原地爆炸',
         icon: '📖'
     },
     DA_YU_MAO_QIU: {
         id: 'da_yu_mao_qiu',
-        name: '打羽毛球',
+        name: '铩羽而归',
         description: '邀请对手打球，并让对手的一颗棋子变成羽毛球',
         icon: '🏸'
     }
