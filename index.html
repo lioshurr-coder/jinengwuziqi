@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技能五子棋 - Skill Gomoku</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Screen 1: Setup Screen -->
+    <div id="setup-screen" class="screen active">
+        <div class="setup-container">
+            <h1 class="game-title">技能五子棋</h1>
+            <p class="game-subtitle">Skill Gomoku</p>
+            
+            <div class="players-setup">
+                <!-- Player 1 Setup -->
+                <div class="player-setup player1-setup">
+                    <h2>玩家一</h2>
+                    <div class="avatar-selection">
+                        <div class="avatar-option selected" data-avatar="1">🐼</div>
+                        <div class="avatar-option" data-avatar="2">🐯</div>
+                        <div class="avatar-option" data-avatar="3">🐲</div>
+                        <div class="avatar-option" data-avatar="4">🦅</div>
+                    </div>
+                    <input type="text" id="player1-name" placeholder="输入昵称" maxlength="10" value="玩家一">
+                </div>
+                
+                <div class="vs-divider">VS</div>
+                
+                <!-- Player 2 Setup -->
+                <div class="player-setup player2-setup">
+                    <h2>玩家二</h2>
+                    <div class="avatar-selection">
+                        <div class="avatar-option" data-avatar="5">🦊</div>
+                        <div class="avatar-option selected" data-avatar="6">🐺</div>
+                        <div class="avatar-option" data-avatar="7">🦉</div>
+                        <div class="avatar-option" data-avatar="8">🐍</div>
+                    </div>
+                    <input type="text" id="player2-name" placeholder="输入昵称" maxlength="10" value="玩家二">
+                </div>
+            </div>
+            
+            <button id="start-game-btn" class="start-btn">开始游戏</button>
+        </div>
+    </div>
+
+    <!-- Screen 2: Game Screen -->
+    <div id="game-screen" class="screen">
+        <div class="game-container">
+            <!-- Timer -->
+            <div class="timer-section">
+                <div class="timer-display">
+                    <span id="timer-text">10</span>
+                    <span class="timer-label">秒</span>
+                </div>
+                <div class="turn-indicator">
+                    当前回合: <span id="current-player-name">玩家一</span>
+                </div>
+            </div>
+            
+            <!-- Main Game Area -->
+            <div class="game-main">
+                <!-- Player 1 Panel -->
+                <div class="player-panel player1-panel">
+                    <div class="player-avatar" id="player1-avatar-display">🐼</div>
+                    <div class="player-name" id="player1-name-display">玩家一</div>
+                    <div class="player-color black-stone">黑棋</div>
+                    <div class="skills-section">
+                        <h3>技能卡</h3>
+                        <div class="skills-container" id="player1-skills"></div>
+                    </div>
+                </div>
+                
+                <!-- Game Board -->
+                <div class="board-section">
+                    <canvas id="game-board" width="600" height="600"></canvas>
+                    <div id="skill-description" class="skill-description"></div>
+                </div>
+                
+                <!-- Player 2 Panel -->
+                <div class="player-panel player2-panel">
+                    <div class="player-avatar" id="player2-avatar-display">🐺</div>
+                    <div class="player-name" id="player2-name-display">玩家二</div>
+                    <div class="player-color white-stone">白棋</div>
+                    <div class="skills-section">
+                        <h3>技能卡</h3>
+                        <div class="skills-container" id="player2-skills"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shichahai Lake -->
+            <div class="lake-section">
+                <div class="lake-container">
+                    <canvas id="lake-canvas" width="480" height="180"></canvas>
+                    <div class="shark" id="shark">🦈</div>
+                    <div class="lake-warning" id="lake-warning">⚠️ 鲨鱼即将出现!</div>
+                </div>
+                <div class="lake-label">什刹海</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 3: Result Screen -->
+    <div id="result-screen" class="screen">
+        <div class="result-container">
+            <h1 class="result-title">游戏结束</h1>
+            <div class="winner-display">
+                <div class="winner-avatar" id="winner-avatar">🐼</div>
+                <div class="winner-text">
+                    <span id="winner-name">玩家一</span>
+                    <span class="win-text">获胜!</span>
+                </div>
+            </div>
+            <div class="result-buttons">
+                <button id="play-again-btn" class="result-btn">再来一局</button>
+                <button id="back-to-setup-btn" class="result-btn secondary">返回设置</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/shark.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
