@@ -540,3 +540,58 @@ body {
 .cell-badminton {
     font-size: 1.5rem;
 }
+
+/* ==================== SKILLS INTRODUCTION ==================== */
+.skills-intro {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-intro-title {
+    font-size: 1.5rem;
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill-intro-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border-left: 3px solid #ffd700;
+    transition: all 0.3s ease;
+}
+
+.skill-intro-item:hover {
+    background: rgba(255, 215, 0, 0.1);
+    transform: translateX(5px);
+}
+
+.skill-intro-item .skill-name {
+    color: #ffd700;
+    font-weight: bold;
+    min-width: 100px;
+    flex-shrink: 0;
+}
+
+.skill-intro-item .skill-desc {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
